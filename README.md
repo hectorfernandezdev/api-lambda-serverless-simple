@@ -21,34 +21,29 @@ Bucket example: api-lambda-hectorfernandez-dev
 Run the following command:
 
 ```
-serverless deploy --stage local
+serverless deploy 
 ```
 
 After completing the deploy you will have some URLs like these
 
-1) Get ALL Players, method GET
+1) Get ALL Players, method POST
 ```
-https://XXXXX.execute-api.us-west-2.amazonaws.com/dev/players
+https://XXXXX.execute-api.us-west-2.amazonaws.com/dev/hello
 ```
-2) Get ONE Player, method GET
+
+Body payload: 
 ```
-https://XXXXX.execute-api.us-west-2.amazonaws.com/dev/players/{ID}
-```
-3) Create ONE Player, method POST
-```
-https://XXXXX.execute-api.us-west-2.amazonaws.com/dev/players
-```
-4) Update ONE Player, method PUT
-```
-https://XXXXX.execute-api.us-west-2.amazonaws.com/dev/players
-```
-5) Delete ONE Player, method DELETE
-```
-https://XXXXX.execute-api.us-west-2.amazonaws.com/dev/players
+{
+    "username": "montevideo"
+}
 ```
 
 ## :wave: Credits
 > Hector Fernandez, AWS Community Builder
 > Montevideo, Uruguay
 
-[LI:](https://www.linkedin.com/in/hectorfernandez02/)
+[LinkedIn:](https://www.linkedin.com/in/hectorfernandez02/)
+[Podcast:](https://cloudparatodos.substack.com/podcast)
+[Meetup proximos eventos:](https://www.meetup.com/es-ES/aws-ug-montevideo/events/)
+
+
