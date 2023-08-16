@@ -55,12 +55,17 @@ nvm use 16.13.1
 Run the following command:
 
 ```
+serverless offline 
+```
+
+
+After testing you can deploy it.
+
+```
 serverless deploy 
 ```
 
-After completing the deploy you will have some URLs like these
-
-1) Get ALL Players, method POST
+1) Hello, method POST
 ```
 https://XXXXX.execute-api.us-west-2.amazonaws.com/dev/hello
 ```
