@@ -43,7 +43,9 @@ Body payload:
 > Montevideo, Uruguay
 
 [LinkedIn:](https://www.linkedin.com/in/hectorfernandez02/)
+
 [Podcast:](https://cloudparatodos.substack.com/podcast)
+
 [Meetup proximos eventos:](https://www.meetup.com/es-ES/aws-ug-montevideo/events/)
 
 
