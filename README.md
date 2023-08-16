@@ -6,12 +6,26 @@ Project created to show the process to deploy a simple AWS LAMBDA with Node.js u
 This CRUD is for players you can interact with the API
 
 ## :stop_sign: Pre-requirements
-1) Create a S3 Bucket called "api-lambda-USERNAME-ENV" when USERNAME is the USER_NAME defined on keys.yml and ENV the environment "dev" it's ok. 
-Bucket example: api-lambda-hectorfernandez-dev
+1) Create a S3 Bucket called "api-lambda-USERNAME-ENV" 
+when USERNAME is the USER_NAME defined on keys.yml and ENV the environment "dev" it's ok. 
+
+Bucket example: 
+```
+api-lambda-hectorfernandez
+
+```
+
 2) Create an AWS IAM user and keep the aws_access_key_id and the aws_secret_access_key
 (Optional in live workshop, ask the instructor)
+
 3) Install [Serverless Framework](https://www.serverless.com/) CLI v3
+
 4) Use node version 16.x  (we recommended NVM)
+
+```
+nvm use 16.13.1
+
+```
 
 
 ## :racing_car: 1,2,3... here we go!
