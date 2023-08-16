@@ -81,6 +81,8 @@ Body payload:
 > Hector Fernandez, AWS Community Builder
 > Montevideo, Uruguay
 
+[Demo with DynamoDB](https://github.com/hectorfernandezdev/serverless-demo-api-lambda-dynamodb)
+
 [LinkedIn:](https://www.linkedin.com/in/hectorfernandez02/)
 
 [Podcast:](https://cloudparatodos.substack.com/podcast)
