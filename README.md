@@ -6,8 +6,12 @@ Project created to show the process to deploy a simple AWS LAMBDA with Node.js u
 This CRUD is for players you can interact with the API
 
 ## :stop_sign: Pre-requirements
+
 0) Postman
+
 [Postman](https://www.postman.com/downloads/)
+
+
 0.1) Serverless Framework
 ```
 npm install -g serverless
