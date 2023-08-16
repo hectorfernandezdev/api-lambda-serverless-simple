@@ -1,0 +1,45 @@
+#Nombre para identificar
+service: api-lambda-serverless-${file(./keys.yml):USER_NAME}
+frameworkVersion: '3'
+
+plugins:
+  - serverless-offline
+  - serverless-offline-watcher
+#Cosas custom por los plugins utilizados
+custom:
+  serverless-offline-watcher:
+    - path:
+        - src/controllers/index.js
+      command: echo "js file was modified!"
+      
+#Puedes tener otros proveedores, en este caso usamos AWS
+provider:
+  name: aws
+  lambdaHashingVersion: 20201221
+  stage: dev
+  region: us-east-1
+  #Configuraciones de CPU y ambiente
+  runtime: nodejs16.x
+  memorySize: 128
+  timeout: 5
+  
+#TAGS sirven para agrupar los recursos creados en la nube y por ejemplo sumar costos
+  tags:
+    project: awsUserGroupMontevideo
+    usuario: ${file(./keys.yml):USER_NAME}
+
+#Importante, ya que de no tener este Bucket se genera uno de forma aleatoria
+  deploymentBucket:
+    name: api-lambda-serverless-${file(./keys.yml):USER_NAME}
+    serverSideEncryption: AES256
+  stackName: api-lambda-serverless-${file(./keys.yml):USER_NAME}
+
+#Lista de funciones Lambdas a crear
+functions:
+  hello-lambda:
+    handler: src/controllers/index.handler  # Ubicacion del controlador que estaremos utilizando, por buenas practicas siempre se exporta el index.handler
+    events:
+      - http:
+          path: /hello  # URL Path que usaremos
+          method: post  #Metodo HTTP en este caso POST
+          cors: true  #True para poder usarlo desde cualquier origen
